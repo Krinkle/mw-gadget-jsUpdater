@@ -127,6 +127,11 @@
 			replace: '$1.length',
 			summary: '$obj.size() → $obj.length'
 		},
+		old$j: {
+			regex: /\$j\s*\(/g,
+			replace: '$(',
+			summary: '$j → $'
+		},
 		newArray: {
 			regex: /new\s+Array\(\s*\)/g,
 			replace: '[]',
