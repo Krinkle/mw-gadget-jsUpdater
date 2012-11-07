@@ -10,7 +10,7 @@
  */
 /*jslint browser: true, continue: true, plusplus: true, regexp: true*/
 /*global mediaWiki, jQuery */
-(function (mw, $, undefined) {
+(function (mw, $) {
 	"use strict";
 
 	var jsUpdater = {};
