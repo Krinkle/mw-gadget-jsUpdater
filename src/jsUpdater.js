@@ -157,6 +157,16 @@
 			replace: '$($1).focus(',
 			summary: 'addHandler → $(...).focus'
 		},
+		live: {
+			regex: /\$\((.*?)\)\.live\((.*?), *(.*?)\)/g,
+			replace: '$(document).on($2,$1,$3)',
+			summary: 'live → $(document).on'
+		},
+		live2: {
+			regex: /\$\((.*?),([^\),]*?)\)\.live\((.*?),/g,
+			replace: '$($2).on($3,$1,',
+			summary: 'live → $(document).on'
+		},
 		mwUserName: {
 			regex: /mw\.user\.name\(\s*\)/g,
 			replace: 'mw.user.getName()',
@@ -191,6 +201,42 @@
 			regex: /jsMsg/g,
 			replace: 'mw.notify',
 			summary: 'jsMsg → mw.notify'
+		},
+		toJSON: {
+			regex: /\$\.toJSON/g,
+			replace: 'JSON.stringify',
+			summary: '$.toJSON → JSON.stringify'
+		},
+		parseJSON: {
+			regex: /\$\.parseJSON/g,
+			replace: 'JSON.parse',
+			summary: '$.parseJSON → JSON.parse'
+		},
+		evalJSON: {
+			regex: /\$\.evalJSON/g,
+			replace: 'JSON.parse',
+			summary: '$.evalJSON → JSON.parse'
+		},
+		secureEvalJSON: {
+			regex: /\$\.secureEvalJSON/g,
+			replace: 'JSON.parse',
+			summary: '$.secureEvalJSON → JSON.parse'
+		},
+		quoteString: {
+			regex: /\$\.quoteString/g,
+			replace: 'JSON.stringify',
+			summary: '$.quoteString → JSON.stringify'
+		},
+		browser: {
+			regex: /\$\.browser/g,
+			// TODO: Improve this
+			replace: '/* FIXME: $.client */$.browser',
+			summary: '$.browser → $.client'
+		},
+		andSelf: {
+			regex: /\.andSelf\(/g,
+			replace: '.addBack(',
+			summary: '.andSelf → .addBack'
 		}
 	};
 
