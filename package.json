@@ -11,11 +11,13 @@
   },
   "author": "Helder <he7d3r@gmail.com>",
   "scripts": {
-    "test": "jshint . && jscs src test"
+    "test": "grunt test"
   },
   "devDependencies": {
-    "jscs": "^1.6.1",
-    "jshint": "^2.5.5",
-    "qunitjs": "^1.15.0"
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-qunit": "^0.5.2",
+    "grunt-jscs": "^0.7.1"
   }
 }
