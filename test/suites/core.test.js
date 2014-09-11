@@ -1,19 +1,20 @@
-/*global jsUpdater, jQuery, QUnit*/
+/*global jsUpdater, QUnit*/
 (function (jsUpdater, $, QUnit) {
-	"use strict";
+	'use strict';
+
 	QUnit.module('init');
 
 	QUnit.test('getPatterns', function (assert) {
 		var badSample, goodSample;
 		QUnit.expect(4);
 
-		badSample = 'var nsId = wgNamespaceNumber;'
-			+ 'var namespace = wgFormattedNamespaces[nsId];'
-			+ 'var sections = $("h2").size();';
+		badSample = 'var nsId = wgNamespaceNumber;' +
+			'var namespace = wgFormattedNamespaces[nsId];' +
+			'var sections = $("h2").size();';
 
-		goodSample = 'var nsId = mw.config.get("wgNamespaceNumber");'
-			+ 'var namespace = mw.config.get("wgFormattedNamespaces")[nsId];'
-			+ 'var sections = $("h2").length;';
+		goodSample = 'var nsId = mw.config.get("wgNamespaceNumber");' +
+			'var namespace = mw.config.get("wgFormattedNamespaces")[nsId];' +
+			'var sections = $("h2").length;';
 
 		assert.deepEqual(
 			jsUpdater.getPatterns(badSample, /*onlyFirst=*/false),
@@ -37,7 +38,6 @@
 			'getPatterns:onlyFirst matches no false positives'
 		);
 	});
-
 
 	QUnit.module('run');
 
@@ -132,7 +132,6 @@
 				'Pattern ' + verify.pattern + ': ' + (verify.comment || verify.input)
 			);
 		});
-
 	});
 
 }(jsUpdater, jQuery, QUnit));

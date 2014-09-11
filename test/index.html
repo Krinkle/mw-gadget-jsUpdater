@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>Test Suite - jsUpdater</title>
-	<!-- Prerequisites --> 
-	<script src="//bits.wikimedia.org/meta.wikimedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
-	<!-- Main library -->
+	<!-- Source -->
+	<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
 	<script src="../src/jsUpdater.js"></script>
 	<!-- Test framework -->
-	<link rel="stylesheet" href="qunit/qunit/qunit.css">
-	<script src="qunit/qunit/qunit.js"></script>
-	<!-- Test suites -->
-	<script src="suites/core.test.js?4"></script>
+	<link rel="stylesheet" href="../node_modules/qunitjs/qunit/qunit.css">
+	<script src="../node_modules/qunitjs/qunit/qunit.js"></script>
+	<!-- Test suite -->
+	<script src="suites/core.test.js"></script>
 </head>
 <body>
 	<div id="qunit"></div>

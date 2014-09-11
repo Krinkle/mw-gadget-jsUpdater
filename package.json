@@ -1,0 +1,21 @@
+{
+  "name": "mw-gadget-jsUpdater",
+  "version": "0.10.0",
+  "homepage": "https://github.com/Krinkle/mw-gadget-jsUpdater",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Krinkle/mw-gadget-jsUpdater.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Krinkle/mw-gadget-jsUpdater/issues"
+  },
+  "author": "Helder <he7d3r@gmail.com>",
+  "scripts": {
+    "test": "jshint . && jscs src test"
+  },
+  "devDependencies": {
+    "jscs": "^1.6.1",
+    "jshint": "^2.5.5",
+    "qunitjs": "^1.15.0"
+  }
+}

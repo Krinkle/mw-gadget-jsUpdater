@@ -8,10 +8,8 @@
  * @author Timo Tijhof, 2011-2012 ([[m:User:Krinkle]])
  * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/jsUpdater.js]] / [[File:User:Helder.wiki/Tools/jsUpdater.js]]
  */
-/*jslint browser: true, continue: true, plusplus: true, regexp: true*/
-/*global mediaWiki, jQuery */
 (function (mw, $) {
-	"use strict";
+	'use strict';
 
 	var jsUpdater = {};
 
@@ -347,9 +345,9 @@
 				url,
 				mw.msg('jsupdater-update-link'),
 				'ca-js-updater',
-				updates.length
-					? mw.msg('jsupdater-update-link-description-some')
-					: mw.msg('jsupdater-no-updates')
+				updates.length ?
+					mw.msg('jsupdater-update-link-description-some') :
+					mw.msg('jsupdater-no-updates')
 			);
 			$(plink).find('a').css('color', updates.length ? 'orange' : 'green');
 		} else {
